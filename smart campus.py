@@ -3,9 +3,7 @@ import numpy as np
 import pandas as pd
 import matplotlib.pyplot as plt
 
-class MissingFileOrFolderError(Exception):
-    """Raised when a required file or folder is missing in the directory."""
-    pass
+
 
 
 def lab1_registration():
@@ -220,6 +218,10 @@ def lab6_file_handling():
     print("Total Students:", total_students)
     print("Average Marks:", average_marks)
     print("Top Student:", top_student, "with", highest_marks, "marks")
+    
+class MissingFileOrFolderError(Exception):
+    """Raised when a required file or folder is missing in the directory."""
+    pass
 
 def scan_directory(path):
     """Helper function for Lab 7"""
