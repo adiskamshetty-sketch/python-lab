@@ -3,16 +3,10 @@ import numpy as np
 import pandas as pd
 import matplotlib.pyplot as plt
 
-# ==========================================
-# Lab 7 Custom Exception
-# ==========================================
 class MissingFileOrFolderError(Exception):
     """Raised when a required file or folder is missing in the directory."""
     pass
 
-# ==========================================
-# Module Functions
-# ==========================================
 
 def lab1_registration():
     """Q1. Student Registration and Grade Evaluation"""
@@ -187,23 +181,23 @@ def lab5_fee_calculation():
 def lab6_file_handling():
     """Q6. File Handling for Student Academic Records"""
     print("\n--- File Handling ---")
-    # Step 1: Write student details
+    
     with open("student_records.txt", "w") as file:
         file.write("ID, Name, Marks\n")
-        file.write("101, Arjun, 85\n")
+        file.write("101, Arjun op, 85\n")
         file.write("102, Meera, 92\n")
         file.write("103, Ravi, 76\n")
         file.write("104, Anita, 89\n")
     print("Student records written to file successfully.")
     
-    # Step 2: Read stored records
+    
     print("\nReading stored records:")
     with open("student_records.txt", "r") as file:
         records = file.readlines()
         for record in records:
             print(record.strip())
             
-    # Step 3: Process stored data
+    
     print("\nGenerating Report:")
     total_students = 0
     total_marks = 0
@@ -263,7 +257,7 @@ def lab8_performance_analytics():
     """Q8. Student Performance Analysis using NumPy, Pandas, Matplotlib"""
     print("\n--- Performance Analytics ---")
     
-    # Create a dummy CSV for testing if it doesn't exist
+    
     if not os.path.exists("student_performance.csv"):
         print("Creating a sample 'student_performance.csv' for analysis...")
         with open("student_performance.csv", "w") as f:
@@ -299,7 +293,7 @@ def lab8_performance_analytics():
         print(f"Science: {top_science}")
         print(f"English: {top_english}")
         
-        # Visualization 1
+        
         subjects = ["Math", "Science", "English"]
         plt.bar(subjects, mean_scores, color=["blue", "green", "orange"])
         plt.title("Average Scores per Subject")
@@ -307,7 +301,7 @@ def lab8_performance_analytics():
         plt.ylabel("Average Score")
         plt.show()
         
-        # Visualization 2
+        
         df.plot(x="Name", y=["Math", "Science", "English"], kind="bar")
         plt.title("Student Performance Comparison")
         plt.ylabel("Scores")
@@ -318,9 +312,7 @@ def lab8_performance_analytics():
     except Exception as e:
         print(f"Unexpected Error: {e}")
 
-# ==========================================
-# Main System Dashboard
-# ==========================================
+
 
 def main_dashboard():
     """Main System Application Dashboard (Lab 9 & 10)"""
