@@ -3,9 +3,6 @@ import numpy as np
 import pandas as pd
 import matplotlib.pyplot as plt
 
-
-
-
 def lab1_registration():
     """Q1. Student Registration and Grade Evaluation"""
     print("\n--- Student Registration ---")
